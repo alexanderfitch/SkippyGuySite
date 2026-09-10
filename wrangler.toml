@@ -13,6 +13,11 @@
 name = "skippy-guy-site"
 compatibility_date = "2026-09-10"
 
+# Which Cloudflare account to deploy to. This login can see more than one,
+# so pinning it here keeps `npm run deploy` and CI from stalling on a prompt.
+# This is "Alexfitch613@gmail.com's Account" — an account id is not a secret.
+account_id = "42e46fbf5ee1e843646addc0bac4a9b3"
+
 [assets]
 # The whole site lives in public/. Only what is in there is ever uploaded,
 # so config, README and node_modules cannot leak into the deploy.
