@@ -46,9 +46,23 @@ README.md               This file
 
 Only the `public/` folder is ever deployed. Everything beside it is tooling.
 
-**Every image in `public/assets/` right now is a generated placeholder.** Replace them
-with real stills (`.jpg` is fine — just point to the new filename) and the site
-will look like your work instead of grey rectangles.
+**Images.** The film thumbnails and the frames in each film's Stills gallery are
+real — pulled from YouTube (`public/assets/stills/frames/`). The portrait on the
+About page is still a generated placeholder, as are the abstract SVGs in
+`public/assets/bts/` (kept around in case you want stand-ins). Drop in real
+photos and point the paths at them.
+
+**Still placeholder text**, all in `public/js/site-data.js`:
+
+| What | Where |
+|---|---|
+| Synopsis on every film | `synopsis` on each entry in `FILMS` |
+| Contact email (`hello@example.com`) | `SITE.email` |
+| About page bio and headline | `ABOUT.headline`, `ABOUT.bio` |
+| Homepage statement paragraph | `public/index.html` |
+
+Credits currently say only "Directed by Skippy Guy" on each film — worth
+checking, and worth expanding with cast and crew.
 
 ---
 
@@ -128,9 +142,9 @@ video: { type: "file",    src: "assets/video/f.mp4" }// self-hosted mp4
 video: null                                          // "Trailer coming soon"
 ```
 
-Right now every film is set to `null`, so each page shows its poster frame with
-a "coming soon" note. Swap in a real id and the play button starts working
-immediately.
+All nine films are already wired to their real YouTube ids, pulled from the
+[Skippy Guy Productions](https://www.youtube.com/@skippyguy) channel, so the
+play button works on every film page.
 
 For YouTube, the id is the part after `v=`:
 `youtube.com/watch?v=`**`dQw4w9WgXcQ`**. For Vimeo it's the number at the end

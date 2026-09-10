@@ -388,7 +388,7 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-3.5px) rota
       rgba(0, 0, 0, 0.94) 0%,
       rgba(0, 0, 0, 0.86) 30%,
       rgba(0, 0, 0, 0.58) 62%,
-      rgba(0, 0, 0, 0.62) 100%
+      rgba(0, 0, 0, 0.80) 100%
     );
 }
 .hero__inner { width: 100%; }
@@ -865,7 +865,10 @@ body.nav-open .nav-toggle span:nth-child(2) { transform: translateY(-3.5px) rota
   display: block;
   overflow: hidden;
   background: var(--ink-2);
-  aspect-ratio: 3 / 2;
+  /* 16:9 — film frames are widescreen, and a letterboxed 4:3 source (which
+     is what YouTube's frame grabs are) crops to exactly this, so the black
+     bars fall outside the tile instead of showing. */
+  aspect-ratio: 16 / 9;
   margin: 0 0 clamp(0.5rem, 1.2vw, 1rem);
   break-inside: avoid;
   -webkit-column-break-inside: avoid;

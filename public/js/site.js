@@ -620,14 +620,20 @@
       : "";
 
     const gallery = has(film.stills)
-      ? '<section class="section reveal" id="behind-the-scenes">' +
+      ? '<section class="section reveal" id="stills">' +
           '<div class="section-head">' +
-            '<h2 class="label">Behind the scenes</h2>' +
-            '<span class="label dim">' + film.stills.length + " photographs</span>" +
+            '<h2 class="label">Stills</h2>' +
+            '<span class="label dim">' + film.stills.length + " frames</span>" +
           "</div>" +
           galleryMarkup(film.stills) +
         "</section>"
       : "";
+
+    // Section labels are only drawn when they have something under them, so
+    // a film with no synopsis or no credits yet doesn't show empty headings.
+    const hasProse = !!(synopsis || quote);
+    const hasAside = !!(has(film.credits) || has(film.facts) || awards);
+    const layoutClass = hasProse && hasAside ? "section split" : "section";
 
     mount.innerHTML =
       '<div class="wrap">' +
@@ -644,20 +650,26 @@
 
         '<div class="reveal">' + renderPlayer(film) + "</div>" +
 
-        '<section class="section split">' +
-          '<div class="prose reveal">' +
-            '<p class="label" style="margin-bottom:1.25rem">Synopsis</p>' +
-            synopsis +
-            quote +
-          "</div>" +
-          '<aside class="split__aside reveal" style="--reveal-delay:120ms">' +
-            '<p class="label" style="margin-bottom:1.25rem">Cast & crew</p>' +
-            creditsMarkup(film.credits) +
-            (has(film.facts)
-              ? '<p class="label" style="margin:2.5rem 0 1.25rem">Specifications</p>' + factsMarkup(film.facts)
-              : "") +
-            awards +
-          "</aside>" +
+        '<section class="' + layoutClass + '">' +
+          (hasProse
+            ? '<div class="prose reveal">' +
+                '<p class="label" style="margin-bottom:1.25rem">Synopsis</p>' +
+                synopsis +
+                quote +
+              "</div>"
+            : "") +
+          (hasAside
+            ? '<aside class="' + (hasProse ? "split__aside " : "") + 'reveal" style="--reveal-delay:120ms">' +
+                (has(film.credits)
+                  ? '<p class="label" style="margin-bottom:1.25rem">Cast &amp; crew</p>' + creditsMarkup(film.credits)
+                  : "") +
+                (has(film.facts)
+                  ? '<p class="label" style="margin:' + (has(film.credits) ? "2.5rem 0 1.25rem" : "0 0 1.25rem") + '">Specifications</p>' +
+                    factsMarkup(film.facts)
+                  : "") +
+                awards +
+              "</aside>"
+            : "") +
         "</section>" +
 
         notes +
@@ -671,8 +683,16 @@
   /* ------------------------------------------------------------------------
      7. Press
      ------------------------------------------------------------------------ */
+  /** Muted placeholder for a press section with nothing in it yet. */
+  function emptyState(text) {
+    return '<p class="form__note" style="padding:1.5rem 0">' + esc(text) + "</p>";
+  }
+
   function renderPress() {
     const quotes = $("[data-press-quotes]");
+    if (quotes && !has(PRESS.quotes)) {
+      quotes.innerHTML = emptyState("No press yet.");
+    }
     if (quotes && has(PRESS.quotes)) {
       quotes.innerHTML = PRESS.quotes
         .map(
@@ -696,6 +716,9 @@
     }
 
     const features = $("[data-press-features]");
+    if (features && !has(PRESS.features)) {
+      features.innerHTML = emptyState("No interviews or features yet.");
+    }
     if (features && has(PRESS.features)) {
       features.innerHTML = PRESS.features
         .map(
@@ -716,6 +739,9 @@
     }
 
     const screenings = $("[data-press-screenings]");
+    if (screenings && !has(PRESS.screenings)) {
+      screenings.innerHTML = emptyState("No screenings announced.");
+    }
     if (screenings && has(PRESS.screenings)) {
       screenings.innerHTML = PRESS.screenings
         .map(
@@ -732,6 +758,9 @@
     }
 
     const kit = $("[data-press-kit]");
+    if (kit && !has(PRESS.kit)) {
+      kit.innerHTML = emptyState("Press materials available on request.");
+    }
     if (kit && has(PRESS.kit)) {
       kit.innerHTML = PRESS.kit
         .map(
