@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Films — Skippy Guy</title>
+<meta name="description" content="Complete filmography: six short films, 2021 to 2025.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Films — Skippy Guy">
+<meta property="og:description" content="Complete filmography: six short films, 2021 to 2025.">
+<meta property="og:image" content="assets/stills/film-1-wide.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<div data-header></div>
+
+<main id="main">
+
+  <!-- ======================================================================
+       PAGE HEAD — edit this copy freely
+       ====================================================================== -->
+  <section class="wrap page-head">
+    <p class="label reveal">Filmography</p>
+    <h1 class="page-head__title reveal-mask" style="--reveal-delay:60ms"><span>Films</span></h1>
+    <p class="page-head__intro lead reveal" style="--reveal-delay:180ms">
+      Six shorts made between 2021 and 2025. Each one has its own page with the
+      full film, credits and photographs from the shoot.
+    </p>
+  </section>
+
+  <!-- Index rows are generated from FILMS in js/site-data.js -->
+  <section class="wrap section section--flush-top">
+    <div class="index-list" data-film-index></div>
+  </section>
+
+  <!-- ======================================================================
+       Grid view of the same films — delete this section if the list above
+       is enough on its own.
+       ====================================================================== -->
+  <section class="wrap section">
+    <div class="section-head">
+      <h2 class="label">Stills</h2>
+      <span class="label dim">Click any film</span>
+    </div>
+    <div class="film-grid" data-film-grid></div>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

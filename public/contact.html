@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Skippy Guy</title>
+<meta name="description" content="Get in touch about screenings, commissions and collaboration.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact — Skippy Guy">
+<meta property="og:description" content="Get in touch about screenings, commissions and collaboration.">
+<meta property="og:image" content="assets/stills/film-1-wide.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<div data-header></div>
+
+<main id="main">
+
+  <section class="wrap page-head">
+    <p class="label reveal">Contact</p>
+    <h1 class="page-head__title reveal-mask" style="--reveal-delay:60ms"><span>Say hello</span></h1>
+    <p class="page-head__intro lead reveal" style="--reveal-delay:180ms">
+      For screenings, commissions, festival inquiries or a coffee — the fastest way
+      to reach me is email.
+    </p>
+  </section>
+
+  <!-- Email, representation and location come from SITE in js/site-data.js -->
+  <section class="wrap section section--flush-top">
+    <div class="contact-grid" data-contact-details></div>
+  </section>
+
+  <section class="wrap section">
+    <div class="split">
+      <div class="reveal">
+        <div class="section-head"><h2 class="label">Send a message</h2></div>
+
+        <!-- The form posts to SITE.formEndpoint in js/site-data.js.
+             While that is null the form stays inert and points people at the
+             email address instead of silently failing. -->
+        <form class="form" method="post" data-contact-form>
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="c-subject">Subject</label>
+            <select id="c-subject" name="subject">
+              <option>General</option>
+              <option>Festival / screening</option>
+              <option>Press</option>
+              <option>Commission or commercial work</option>
+              <option>Collaboration</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="6" required></textarea>
+          </div>
+          <div>
+            <button class="btn btn--solid" type="submit"><span>Send</span></button>
+          </div>
+          <p class="form__status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <aside class="split__aside reveal" style="--reveal-delay:120ms">
+        <p class="label" style="margin-bottom:1.25rem">Elsewhere</p>
+        <div class="socials" data-contact-socials></div>
+        <p class="form__note" style="margin-top:var(--sp-4)">
+          Response time is usually a few days. For anything time-sensitive, please
+          put a date in the subject line.
+        </p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

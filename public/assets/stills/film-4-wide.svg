@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1000" width="2400" height="1000" role="img">
+<defs>
+<filter id="g39" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="39" result="n"/>
+  <feColorMatrix in="n" type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+</filter>
+<linearGradient id="sky39" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a1a1a"/><stop offset="0.55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/>
+</linearGradient>
+<radialGradient id="glow39" cx="50%" cy="45%" r="60%">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.34"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="vig39" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/>
+</linearGradient>
+</defs><rect width="2400" height="1000" fill="#0b0b0b"/><ellipse cx="921" cy="400" rx="1080" ry="450" fill="url(#glow39)"/><ellipse cx="921" cy="319" rx="76" ry="87" fill="#000"/><path d="M800 980.0 L838 395 Q921 327 1005 395 L1043 980.0 Z" fill="#000"/><rect width="2400" height="1000" fill="url(#vig39)"/><rect width="2400" height="1000" filter="url(#g39)" opacity="0.55"/></svg>

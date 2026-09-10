@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Cloudflare serves this page for ANY unmatched path, including deep ones
+     like /old/link/here. The base tag makes every relative URL below (and
+     every link the header and footer build) resolve from the site root, so
+     the page works at whatever depth it is served from. -->
+<base href="/">
+
+<title>Not found — Skippy Guy</title>
+<meta name="description" content="That page isn't here.">
+<meta name="robots" content="noindex">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<div data-header></div>
+
+<main id="main">
+  <section class="wrap page-head" style="min-height:52vh">
+    <p class="label reveal">404</p>
+    <h1 class="page-head__title reveal-mask" style="--reveal-delay:60ms"><span>Nothing here.</span></h1>
+    <p class="page-head__intro lead reveal" style="--reveal-delay:180ms">
+      The page you were after has moved or never existed. The films are all still
+      where you left them.
+    </p>
+    <p class="reveal" style="--reveal-delay:260ms;margin-top:var(--sp-4);display:flex;gap:var(--sp-2);flex-wrap:wrap">
+      <a class="btn btn--solid" href="films.html"><span>All films</span></a>
+      <a class="btn" href="index.html"><span>Home</span></a>
+    </p>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

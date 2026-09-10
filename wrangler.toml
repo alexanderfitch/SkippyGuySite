@@ -1,0 +1,30 @@
+# ==============================================================================
+# Cloudflare Worker — static asset hosting
+# ------------------------------------------------------------------------------
+# This site is entirely static (HTML, CSS, JS, images), so there is no Worker
+# script at all. Cloudflare serves the files directly from its edge, which is
+# both the fastest and the cheapest way to run it.
+#
+#   npm install        once, to get wrangler
+#   npm run dev        preview at http://localhost:8787
+#   npm run deploy     publish to Cloudflare
+# ==============================================================================
+
+name = "skippy-guy-site"
+compatibility_date = "2026-09-10"
+
+[assets]
+# The whole site lives in public/. Only what is in there is ever uploaded,
+# so config, README and node_modules cannot leak into the deploy.
+directory = "./public"
+
+# Cloudflare's default. Two things to know:
+#   /            is served from index.html   (required — do not set "none",
+#                                             that makes the homepage 404)
+#   /about.html  redirects to /about         (a 307, so links ending in .html
+#                                             still work and the visitor ends
+#                                             up on the clean URL)
+html_handling = "auto-trailing-slash"
+
+# Unknown paths get the styled 404.html instead of a bare error.
+not_found_handling = "404-page"

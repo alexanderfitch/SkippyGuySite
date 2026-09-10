@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 933" width="1400" height="933" role="img">
+<defs>
+<filter id="g109" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="109" result="n"/>
+  <feColorMatrix in="n" type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+</filter>
+<linearGradient id="sky109" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a1a1a"/><stop offset="0.55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/>
+</linearGradient>
+<radialGradient id="glow109" cx="50%" cy="45%" r="60%">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="vig109" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/>
+</linearGradient>
+</defs><rect width="1400" height="933" fill="url(#sky109)"/><ellipse cx="700" cy="485" rx="700" ry="280" fill="url(#glow109)"/><path d="M700 485 L-420 933 L1820 933 Z" fill="#0a0a0a"/><rect x="697" y="512" width="6" height="7" fill="#fff" opacity="0.3"/><rect x="695" y="524" width="10" height="10" fill="#fff" opacity="0.3"/><rect x="693" y="562" width="15" height="14" fill="#fff" opacity="0.3"/><rect x="690" y="624" width="20" height="18" fill="#fff" opacity="0.3"/><rect x="688" y="711" width="24" height="22" fill="#fff" opacity="0.3"/><rect x="686" y="823" width="29" height="25" fill="#fff" opacity="0.3"/><rect width="1400" height="933" fill="url(#vig109)"/><rect width="1400" height="933" filter="url(#g109)" opacity="0.55"/></svg>

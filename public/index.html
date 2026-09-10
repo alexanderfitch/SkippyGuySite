@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skippy Guy — Short Films</title>
+<meta name="description" content="Short films by Skippy Guy. Selected work, festival screenings and press.">
+
+<!-- Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Skippy Guy — Short Films">
+<meta property="og:description" content="Short films by Skippy Guy. Selected work, festival screenings and press.">
+<meta property="og:image" content="assets/stills/film-1-wide.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<!-- Header (logo + nav) is built from NAV in js/site-data.js -->
+<div data-header></div>
+
+<main id="main">
+
+  <!-- ======================================================================
+       HERO — the film marked `featured: true` in js/site-data.js
+       ====================================================================== -->
+  <section class="hero" data-hero aria-label="Featured film"></section>
+
+  <!-- ======================================================================
+       STATEMENT — plain HTML, edit this text freely
+       ====================================================================== -->
+  <section class="section wrap">
+    <div class="split">
+      <div class="reveal">
+        <p class="label" style="margin-bottom:1.5rem">Statement</p>
+        <p class="lead" style="max-width:34ch">
+          Six short films about people at the end of a long shift.
+        </p>
+      </div>
+      <div class="prose reveal" style="--reveal-delay:140ms">
+        <p>
+          I shoot small: short crews, long takes, and as much on film as the budget
+          will carry. The work is mostly concerned with work — the hours that never
+          make it into anyone's story, and what people say when they are too tired
+          to perform.
+        </p>
+        <p>
+          Everything below is available to watch. Festival programmers and press can
+          find kits and screening dates on the <a class="link link-quiet" href="press.html">press page</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FILM GRID — every film from FILMS in js/site-data.js.
+       Attributes you can add to the div below:
+         data-skip-featured   leave out the hero film (it's already above)
+         data-limit="4"       show only the first N films
+       ====================================================================== -->
+  <section class="section section--flush-top wrap" id="work">
+    <div class="section-head">
+      <h2 class="label">Selected work</h2>
+      <a class="label link link-quiet" href="films.html">All films</a>
+    </div>
+    <div class="film-grid" data-film-grid data-skip-featured></div>
+  </section>
+
+  <!-- ======================================================================
+       CLOSING BAND — edit or delete
+       ====================================================================== -->
+  <section class="section wrap">
+    <hr class="rule">
+    <div class="reveal" style="padding-top:var(--sp-5);text-align:center">
+      <p class="label" style="margin-bottom:1.25rem">Currently</p>
+      <p class="serif" style="font-size:var(--fs-h2);max-width:24ch;margin-inline:auto;line-height:1.2">
+        Developing a first feature. Open to collaboration.
+      </p>
+      <p style="margin-top:2.5rem">
+        <a class="btn" href="contact.html"><span>Get in touch</span></a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

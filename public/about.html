@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Skippy Guy</title>
+<meta name="description" content="Writer and director based in Los Angeles. Bio, approach and selected credits.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Skippy Guy">
+<meta property="og:description" content="Writer and director based in Los Angeles. Bio, approach and selected credits.">
+<meta property="og:image" content="assets/stills/film-1-wide.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<div data-header></div>
+
+<main id="main">
+
+  <section class="wrap page-head">
+    <p class="label reveal">About</p>
+    <h1 class="page-head__title reveal-mask" style="--reveal-delay:60ms"><span>Skippy Guy</span></h1>
+  </section>
+
+  <!-- Bio, portrait, pull quote and the numbers strip all come from ABOUT
+       in js/site-data.js -->
+  <section class="wrap section section--flush-top" data-about></section>
+
+  <!-- ======================================================================
+       APPROACH — plain HTML, edit freely
+       ====================================================================== -->
+  <section class="wrap section">
+    <hr class="rule">
+    <div class="split" style="padding-top:var(--sp-5)">
+      <div class="reveal">
+        <p class="label" style="margin-bottom:1.5rem">How I work</p>
+        <p class="lead" style="max-width:30ch">Small crews. Long takes. Real rooms.</p>
+      </div>
+      <div class="prose reveal" style="--reveal-delay:120ms">
+        <h3>Development</h3>
+        <p>
+          Scripts start as a single location and a single argument. If the room
+          isn't interesting to sit in for ten minutes, the scene doesn't work yet.
+        </p>
+        <h3>Production</h3>
+        <p>
+          Pre-lit sets, minimal coverage, and as few units as the schedule allows.
+          Most of my films are covered in two or three lenses.
+        </p>
+        <h3>Post</h3>
+        <p>
+          Sound first, picture second. The score is usually written before the shoot
+          so the performances have something to lean against.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Films strip -->
+  <section class="wrap section">
+    <div class="section-head">
+      <h2 class="label">Selected films</h2>
+      <a class="label link link-quiet" href="films.html">All films</a>
+    </div>
+    <div class="film-grid" data-film-grid data-limit="4"></div>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

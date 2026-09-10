@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Press — Skippy Guy</title>
+<meta name="description" content="Press quotes, interviews, festival screenings and downloadable press kits.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Press — Skippy Guy">
+<meta property="og:description" content="Press quotes, interviews, festival screenings and downloadable press kits.">
+<meta property="og:image" content="assets/stills/film-1-wide.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<noscript>
+  <div class="wrap" style="padding-block:1.5rem;border-bottom:1px solid var(--line)">
+    <p class="label" style="margin-bottom:0.75rem">Menu</p>
+    <p><a class="link" href="index.html">Home</a> &nbsp; <a class="link" href="films.html">Films</a> &nbsp;
+       <a class="link" href="about.html">About</a> &nbsp; <a class="link" href="press.html">Press</a> &nbsp;
+       <a class="link" href="contact.html">Contact</a></p>
+  </div>
+</noscript>
+
+<div data-header></div>
+
+<main id="main">
+
+  <section class="wrap page-head">
+    <p class="label reveal">Press</p>
+    <h1 class="page-head__title reveal-mask" style="--reveal-delay:60ms"><span>Press &amp; screenings</span></h1>
+    <p class="page-head__intro lead reveal" style="--reveal-delay:180ms">
+      Reviews, interviews and festival dates. Programmers and journalists: kits are
+      below, or email <a class="link link-quiet" href="contact.html">directly</a> for
+      screeners and high-resolution stills.
+    </p>
+  </section>
+
+  <!-- All four sections below are generated from PRESS in js/site-data.js -->
+  <section class="wrap section section--flush-top">
+    <div class="section-head"><h2 class="label">Selected quotes</h2></div>
+    <div class="press-list" data-press-quotes></div>
+  </section>
+
+  <section class="wrap section" id="screenings">
+    <div class="section-head"><h2 class="label">Screenings</h2></div>
+    <div class="kit" data-press-screenings></div>
+  </section>
+
+  <section class="wrap section">
+    <div class="section-head"><h2 class="label">Features &amp; interviews</h2></div>
+    <div class="kit" data-press-features></div>
+  </section>
+
+  <section class="wrap section" id="press-kit">
+    <div class="section-head">
+      <h2 class="label">Press kit</h2>
+      <span class="label dim">Downloads</span>
+    </div>
+    <div class="kit" data-press-kit></div>
+    <p class="form__note reveal" style="margin-top:var(--sp-3)">
+      Put the real files in <code>assets/press/</code> and add their paths to
+      <code>PRESS.kit</code> in <code>js/site-data.js</code>.
+    </p>
+  </section>
+</main>
+
+<div data-footer></div>
+
+<script src="js/site-data.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

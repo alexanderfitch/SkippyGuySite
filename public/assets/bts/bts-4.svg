@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 933" width="1400" height="933" role="img">
+<defs>
+<filter id="g57" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="57" result="n"/>
+  <feColorMatrix in="n" type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+</filter>
+<linearGradient id="sky57" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a1a1a"/><stop offset="0.55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/>
+</linearGradient>
+<radialGradient id="glow57" cx="50%" cy="45%" r="60%">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="vig57" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/>
+</linearGradient>
+</defs><rect width="1400" height="933" fill="#080808"/><path d="M463 0 L551 0 L422 933 L335 933 Z" fill="#fff" opacity="0.052"/><path d="M601 0 L726 0 L697 933 L572 933 Z" fill="#fff" opacity="0.088"/><path d="M476 0 L589 0 L433 933 L320 933 Z" fill="#fff" opacity="0.094"/><rect width="1400" height="933" fill="url(#glow57)" opacity="0.5"/><rect width="1400" height="933" fill="url(#vig57)"/><rect width="1400" height="933" filter="url(#g57)" opacity="0.55"/></svg>

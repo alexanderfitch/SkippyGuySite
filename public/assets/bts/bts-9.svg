@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="1000" height="1250" role="img">
+<defs>
+<filter id="g122" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="122" result="n"/>
+  <feColorMatrix in="n" type="saturate" values="0"/>
+  <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+</filter>
+<linearGradient id="sky122" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1a1a1a"/><stop offset="0.55" stop-color="#0d0d0d"/><stop offset="1" stop-color="#050505"/>
+</linearGradient>
+<radialGradient id="glow122" cx="50%" cy="45%" r="60%">
+  <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="vig122" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="0.4" stop-color="#000" stop-opacity="0"/>
+  <stop offset="0.7" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.7"/>
+</linearGradient>
+</defs><rect width="1000" height="1250" fill="#080808"/><path d="M537 0 L578 0 L847 1250 L806 1250 Z" fill="#fff" opacity="0.081"/><path d="M685 0 L737 0 L947 1250 L895 1250 Z" fill="#fff" opacity="0.081"/><path d="M533 0 L561 0 L530 1250 L502 1250 Z" fill="#fff" opacity="0.098"/><path d="M502 0 L549 0 L629 1250 L582 1250 Z" fill="#fff" opacity="0.040"/><rect width="1000" height="1250" fill="url(#glow122)" opacity="0.5"/><rect width="1000" height="1250" fill="url(#vig122)"/><rect width="1000" height="1250" filter="url(#g122)" opacity="0.55"/></svg>
